@@ -11,7 +11,7 @@ output:
   
 I'm an R Markdown document! 
 
-```{r}
+```{r echo = TRUE, message = FALSE}
 library(tidyverse)
 ```
 
@@ -34,7 +34,7 @@ The mean is `r mean(samp)`.
 
 This is where I'm going to talk about code chunks.
 
-```{r}
+```{r eval = FALSE}
 mean(samp)
 sd(samp)
 ```
@@ -73,7 +73,7 @@ absolute value of each element of that sample, and produces a histogram of
 the absolute value. The code chunk also finds the median of the sample and
 stores it for easy in-line printing.
 
-```{r learning_assessment_1}
+```{r}
 la_df = 
   tibble(
     numeric_samp = rnorm(500, mean = 1),
